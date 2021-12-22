@@ -1,0 +1,4 @@
+2021-12-22 13:02:35 info: Success on : http://localhost:5000/user/register | status: 404
+2021-12-22 13:12:47 info: Success on : http://localhost:5000/user/register | status: 403
+2021-12-22 13:16:00 info: Success on : http://localhost:5000/user/register | status: 403
+2021-12-22 13:19:48 info: Success on : http://localhost:5000/user/register | status: 201

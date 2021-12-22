@@ -18,7 +18,7 @@ const RateLimiter = require("../middlewares/RateLimiter");
 
 const {
   validate,
-  register_user,
+  register_admin,
   login_user,
 } = require("../middlewares/Validators");
 
@@ -35,7 +35,7 @@ const {
 //   * Routes for user authentication
 //   */
 
-router.post("/register", RateLimiter.login, validate(register_user), AdminController.register);
+router.post("/register", RateLimiter.login, validate(register_admin), AdminController.register);
 
 //router.post("/login", RateLimiter.login, validate(login_user), AuthController.login);
 

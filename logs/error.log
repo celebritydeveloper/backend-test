@@ -1,0 +1,11 @@
+2021-12-22 13:11:05 error: Error on : http://localhost:5000/user/register | status: 500 | message: Cannot find module '../helpers/LoginData'
+Require stack:
+- /home/celebritydeveloper/Documents/backend-test/controllers/UserController.js
+- /home/celebritydeveloper/Documents/backend-test/routes/UserRoutes.js
+- /home/celebritydeveloper/Documents/backend-test/routes/index.js
+- /home/celebritydeveloper/Documents/backend-test/app.js
+- /home/celebritydeveloper/Documents/backend-test/index.js
+2021-12-22 13:14:42 error: Error on : http://localhost:5000/user/register | status: 500 | message: UserLogin is not defined
+2021-12-22 13:16:15 error: Error on : http://localhost:5000/user/register | status: 500 | message: secretOrPrivateKey must have a value
+2021-12-22 13:17:21 error: Error on : http://localhost:5000/user/register | status: 500 | message: logActivity is not defined
+2021-12-22 13:19:18 error: Error on : http://localhost:5000/user/register | status: 500 | message: Invalid schema configuration: `True` is not a valid type at path `timestamps`. See http://bit.ly/mongoose-schematypes for a list of valid schema types.

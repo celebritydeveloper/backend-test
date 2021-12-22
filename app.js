@@ -11,6 +11,8 @@ const cors = require("cors");
 const helmet = require('helmet');
 const compression = require('compression');
 const { sendResponse } = require("./helpers/ResponseHelper");
+const RateLimiter = require('./middlewares/RateLimiter');
+const Routes = require('./routes/');
 
 
 // Middlewares
@@ -34,8 +36,9 @@ app.get('/', (req, res) => {
     sendResponse(req, res, 200, false, true, "Welcome to Shopping Cart");
 })
 
-// app.use('/', RateLimiter.regular);
-// app.use('/user', Routes.UserRoutes);
+app.use('/', RateLimiter.regular);
+app.use('/user', Routes.UserRoutes);
+app.use('/admin', Routes.AdminRoutes);
 
 
 // Handle 404

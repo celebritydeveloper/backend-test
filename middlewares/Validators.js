@@ -27,24 +27,22 @@ module.exports = {
     body("lastname").isString().trim(),
     body("email").isEmail().normalizeEmail(),
     body("phone").isMobilePhone("en-NG"),
+    body("admin_type").isString().trim(),
   ],
 
   register_user: [
     body("firstname").isString().trim(),
     body("email").isEmail().trim(),
-    body("phone").isMobilePhone(),
+    body("phone").isMobilePhone("en-NG"),
     body("password").isString().isLength(8),
     body("lastname").isString().trim(),
   ],
 
   login_user: [body("customer").isString(), body("password").isString()],
 
-  login_biometric_user: [body("phone").isString()],
   change_password: [
     body("old_password").isString(),
     body("new_password").isString().isLength(8),
   ],
- 
-  update_package_image: [body("image").isURL()],
 
 };
