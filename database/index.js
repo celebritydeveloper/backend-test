@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 
-const connection = mongoose.connect("mongodb://localhost:27017/shopping-cart", {
+const connection = mongoose.connect(process.env.DATABASE, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   }).then(() => console.log("Connect Successful"))
@@ -9,4 +9,4 @@ const connection = mongoose.connect("mongodb://localhost:27017/shopping-cart", {
 
 
 
-module.exports = connection
+module.exports = connection;
