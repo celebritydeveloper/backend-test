@@ -21,17 +21,14 @@ const productSchema = new mongoose.Schema({
     required: true,
     min: 1
   },
+  description: {
+    type: String,
+    required: true
+  },
   expiration_date: {
     type: Date,
   },
-  created_at: {
-    type: Date,
-    default: Date.now
-  },
-  updated_at: {
-    type: Date,
-    default: Date.now
-  },
+  timestamps: true
 });
 
 const Product = mongoose.model("Product", productSchema);
