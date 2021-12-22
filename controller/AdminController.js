@@ -65,8 +65,6 @@ class AdminController {
                   authorization
                 }
 
-                console.log(admin_details);
-
                 await logActivity("admin", admin_details._id, login._id, `Registered.`);
                 sendResponse(req, res, 201, false, admin, "Admin created successfully");
             }

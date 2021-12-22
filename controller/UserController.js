@@ -98,14 +98,11 @@ class UserController {
 
         let authorization = JWT.sign(jwt_payload, process.env.JWT_SECRET);
         user_details["authorization"] = authorization;
-        console.log(user_details.authorization);
 
         let user = {
           user_details,
           authorization,
         };
-
-        console.log(user_details);
 
         await logActivity("user", user_details._id, login._id, `Registered.`);
         sendResponse(req, res, 201, false, user, "User created successfully");
