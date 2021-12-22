@@ -64,3 +64,7 @@ Require stack:
 2021-12-22 17:19:39 error: Error on : http://localhost:5000/user/cart/add | status: 500 | message: itemId is not defined
 2021-12-22 17:20:09 error: Error on : http://localhost:5000/user/cart/add | status: 500 | message: itemcart is not defined
 2021-12-22 17:21:16 error: Error on : http://localhost:5000/user/cart/add | status: 500 | message: itemCart is not defined
+2021-12-22 18:56:21 error: Error on : http://localhost:5000/user/item/remove/61c350090b119133ebf84d6c | status: 500 | message: cart.iproduct_isplice is not a function
+2021-12-22 18:58:58 error: Error on : http://localhost:5000/user/item/remove/61c350090b119133ebf84d6c | status: 500 | message: Cannot read property 'splice' of undefined
+2021-12-22 19:08:32 error: Error on : http://localhost:5000/user/item/remove/61c3507ce20a35a2fbe6cb52 | status: 500 | message: cartItem is not defined
+2021-12-22 20:04:35 error: Error on : http://localhost:5000/user/item/update/61c3764255f73ce7cf0843a0 | status: 500 | message: product is not defined

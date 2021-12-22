@@ -25,7 +25,10 @@ const {
 //  /**
 //   * Routes for CART
 //   */
-AuthRouter.post("/cart/add", Authorization, validate(add_cart), UserController.addItem);
+AuthRouter.post("/cart/add", validate(add_cart), UserController.addItem);
+AuthRouter.put('/item/update/:item_id', UserController.editItemQuantity);
+AuthRouter.delete('/item/:item_id/remove', UserController.deleteItem);
+AuthRouter.delete('/cart/:cart_id', UserController.removeCart);
 //router.post("/otp/verify", Authentication, validate(verify_otp), AuthController.verifyOTP);
 
 

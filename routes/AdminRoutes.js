@@ -25,11 +25,11 @@ const {
 //   * Routes for PRODUCT
 //   */
 
-AuthRouter.get('/product/all', Authorization, ProductController.fetchProducts);
-AuthRouter.get('/product/:product_id', Authorization, ProductController.fetchSingleProduct);
-AuthRouter.post("/product/create", Authorization, validate(create_product), ProductController.createProduct);
-AuthRouter.put('/product/update/:product_id', Authorization, validate(update_product), ProductController.updateProduct);
-AuthRouter.delete('/product/remove/:product_id', Authorization, ProductController.deleteProduct);
+AuthRouter.get('/product/all', ProductController.fetchProducts);
+AuthRouter.get('/product/:product_id', ProductController.fetchSingleProduct);
+AuthRouter.post("/product/create", validate(create_product), ProductController.createProduct);
+AuthRouter.put('/product/update/:product_id', validate(update_product), ProductController.updateProduct);
+AuthRouter.delete('/product/remove/:product_id', ProductController.deleteProduct);
 
 
 
@@ -44,6 +44,6 @@ router.post("/register", RateLimiter.login, validate(register_admin), AdminContr
 //   * Route Group for Admin Authenticated Routes
 //   */
 
-router.use("/", Authentication, AuthRouter);
+router.use("/", Authentication, Authorization, AuthRouter);
 
 module.exports = router;
