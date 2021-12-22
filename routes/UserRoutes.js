@@ -7,7 +7,7 @@ const express = require("express");
 const router = express.Router();
 const AuthRouter = express.Router();
 
-const UserController = require("../controllers/UserController");
+const UserController = require("../controller/UserController");
 //const AuthController = require("../controllers/AuthenticationController");
 
 //  const FileUpload = require("../helpers/FileUpload");

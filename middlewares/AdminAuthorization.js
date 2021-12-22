@@ -4,7 +4,7 @@ const Admin = require("../database/models/Admin");
 
 
 //checks if admin is authorized on route
-module.exports = (slug = [])=>{
+module.exports = (slug = []) => {
     return async (req, res, next)=>{
         try{
             if(req.body.user.user_type != process.env.ADMIN_USER_TYPE){

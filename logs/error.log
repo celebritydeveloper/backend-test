@@ -9,3 +9,31 @@ Require stack:
 2021-12-22 13:16:15 error: Error on : http://localhost:5000/user/register | status: 500 | message: secretOrPrivateKey must have a value
 2021-12-22 13:17:21 error: Error on : http://localhost:5000/user/register | status: 500 | message: logActivity is not defined
 2021-12-22 13:19:18 error: Error on : http://localhost:5000/user/register | status: 500 | message: Invalid schema configuration: `True` is not a valid type at path `timestamps`. See http://bit.ly/mongoose-schematypes for a list of valid schema types.
+2021-12-22 14:46:13 error: Error on : http://localhost:5000/admin/register | status: 500 | message: Cannot read property 'email' of null
+2021-12-22 14:47:15 error: Error on : http://localhost:5000/admin/register | status: 500 | message: Cannot read property 'email' of null
+2021-12-22 14:49:01 error: Error on : http://localhost:5000/admin/register | status: 500 | message: Cannot read property 'email' of null
+2021-12-22 14:49:44 error: Error on : http://localhost:5000/admin/register | status: 500 | message: Cannot read property 'email' of null
+2021-12-22 14:50:01 error: Error on : http://localhost:5000/admin/register | status: 500 | message: Illegal arguments: undefined, string
+2021-12-22 14:50:42 error: Error on : http://localhost:5000/admin/register | status: 500 | message: user_details is not defined
+2021-12-22 14:51:08 error: Error on : http://localhost:5000/admin/register | status: 500 | message: E11000 duplicate key error collection: shopping-cart.admins index: email_1 dup key: { email: "essiensaviour.a@gmail.com" }
+2021-12-22 14:53:14 error: Error on : http://localhost:5000/admin/register | status: 500 | message: user_details is not defined
+2021-12-22 15:09:50 error: Error on : http://localhost:5000/admin/register | status: 500 | message: Cannot read property 'user_type' of undefined
+2021-12-22 15:12:16 error: Error on : http://localhost:5000/admin/register | status: 500 | message: Cannot read property 'user_type' of undefined
+2021-12-22 15:13:56 error: Error on : http://localhost:5000/admin/register | status: 500 | message: Cannot read property 'user_type' of undefined
+2021-12-22 15:14:03 error: Error on : http://localhost:5000/admin/register | status: 500 | message: Cannot read property 'user_type' of undefined
+2021-12-22 15:24:57 error: Error on : http://localhost:5000/admin/product/create | status: 500 | message: Admin validation failed: firstname: Path `firstname` is required., lastname: Path `lastname` is required., email: Path `email` is required., phone: Path `phone` is required.
+2021-12-22 15:25:59 error: Error on : http://localhost:5000/admin/product/create | status: 500 | message: Product is not a constructor
+2021-12-22 15:26:07 error: Error on : http://localhost:5000/admin/product/create | status: 500 | message: Product is not a constructor
+2021-12-22 15:26:30 error: Error on : http://localhost:5000/admin/product/create | status: 500 | message: Product is not a constructor
+2021-12-22 15:26:36 error: Error on : http://localhost:5000/admin/product/create | status: 500 | message: Product is not a constructor
+2021-12-22 15:28:07 error: Error on : http://localhost:5000/admin/product/create | status: 500 | message: Product is not a constructor
+2021-12-22 15:30:06 error: Error on : http://localhost:5000/admin/product/create | status: 500 | message: Product is not a constructor
+2021-12-22 15:32:46 error: Error on : http://localhost:5000/admin/product/create | status: 500 | message: Product is not a constructor
+2021-12-22 15:34:02 error: Error on : http://localhost:5000/admin/product/create | status: 500 | message: Product validation failed: sku: Cast to string failed for value "{ generate: [Function (anonymous)] }" (type Object) at path "sku"
+2021-12-22 15:34:26 error: Error on : http://localhost:5000/admin/product/create | status: 500 | message: Product validation failed: sku: Cast to string failed for value "{ generate: [Function (anonymous)] }" (type Object) at path "sku"
+2021-12-22 15:35:51 error: Error on : http://localhost:5000/admin/product/create | status: 500 | message: admin_details is not defined
+2021-12-22 16:04:13 error: Error on : http://localhost:5000/admin/product/update/61c337c7191e7bf4c80eac61 | status: 500 | message: Cannot read property '_id' of null
+2021-12-22 16:04:58 error: Error on : http://localhost:5000/admin/product/update/61c337c7191e7bf4c80eac61 | status: 500 | message: Cannot read property '_id' of null
+2021-12-22 16:17:27 error: Error on : http://localhost:5000/admin/product/all | status: 500 | message: product_id is not defined
+2021-12-22 16:17:29 error: Error on : http://localhost:5000/admin/product/all | status: 500 | message: product_id is not defined
+2021-12-22 16:17:42 error: Error on : http://localhost:5000/admin/product/all | status: 500 | message: product_id is not defined

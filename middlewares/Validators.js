@@ -25,9 +25,21 @@ module.exports = {
   register_admin: [
     body("firstname").isString().trim(),
     body("lastname").isString().trim(),
-    body("email").isEmail().normalizeEmail(),
+    body("email").isEmail().trim(),
     body("phone").isMobilePhone("en-NG"),
     body("admin_type").isString().trim(),
+  ],
+
+  create_product: [
+    body("itemname").isString().trim(),
+    body("price").isInt(),
+    body("stock").isInt(),
+  ],
+
+  update_product: [
+    body("itemname").isString().trim(),
+    body("price").isInt(),
+    body("stock").isInt(),
   ],
 
   register_user: [
@@ -37,6 +49,7 @@ module.exports = {
     body("password").isString().isLength(8),
     body("lastname").isString().trim(),
   ],
+  
 
   login_user: [body("customer").isString(), body("password").isString()],
 

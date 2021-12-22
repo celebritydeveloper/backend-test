@@ -12,7 +12,8 @@ const helmet = require('helmet');
 const compression = require('compression');
 const { sendResponse } = require("./helpers/ResponseHelper");
 const RateLimiter = require('./middlewares/RateLimiter');
-const Routes = require('./routes/');
+const userRoutes = require('./routes/UserRoutes');
+const adminRoutes = require('./routes/AdminRoutes');
 
 
 // Middlewares
@@ -37,8 +38,8 @@ app.get('/', (req, res) => {
 })
 
 app.use('/', RateLimiter.regular);
-app.use('/user', Routes.UserRoutes);
-app.use('/admin', Routes.AdminRoutes);
+app.use('/user', userRoutes);
+app.use('/admin', adminRoutes);
 
 
 // Handle 404

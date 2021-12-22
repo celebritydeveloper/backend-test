@@ -3,8 +3,9 @@ class ActivityLogger {
         return new Promise(async (resolve, reject) => {
             try{
                 if(type === "admin"){
-                    // const AdminModel = require('../database/models').admin_activities;
-                    // await AdminModel.create({activity, admin_id: id, admin_login_id: login_id})
+                    const { AdminActivity } = require("../database/models/AdminActivity");
+                    const adminActivity = await new AdminActivity({activity, admin_id: id, admin_login_id: login_id,});
+                    adminActivity.save();
                 }
                 else{
                     const { UserActivity } = require("../database/models/UserActivity");

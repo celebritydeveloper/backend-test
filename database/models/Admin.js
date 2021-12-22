@@ -52,7 +52,7 @@ const adminSchema = new mongoose.Schema(
       type: String,
       required: false,
     },
-    user_type: {
+    admin_type: {
       type: String,
       default: "user",
     },
