@@ -1,5 +1,5 @@
 const Logger = new (require('./Logger'));
-const { sendEmail } = require('./Emails');
+const { sendEmail } = require('./Email');
 
 class ResponseHelper {
     static async sendResponse(

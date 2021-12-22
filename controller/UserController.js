@@ -180,6 +180,8 @@ class UserController {
     }
   }
 
+
+
   static async editItemQuantity(req, res) {
     try {
       const item_id = req.params.item_id;
@@ -188,7 +190,7 @@ class UserController {
       let cart = await Cart.findOne({ user_id: user.user_id });
       const itemIndex = cart.items.findIndex((item) => item._id == item_id);
 
-      if (itemIndex) {
+      if (itemIndex > -1) {
         let item = cart.items[itemIndex];
         item.quantity = quantity;
 
@@ -212,9 +214,11 @@ class UserController {
     }
   }
 
+
+
   static async deleteItem(req, res) {
     try {
-      const item_id = req.params.iiiiiitem_id;
+      const item_id = req.params.item_id;
       let { user } = req.body;
 
       let cart = await Cart.findOne({ user_id: user.user_id });

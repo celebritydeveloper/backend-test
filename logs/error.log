@@ -68,3 +68,21 @@ Require stack:
 2021-12-22 18:58:58 error: Error on : http://localhost:5000/user/item/remove/61c350090b119133ebf84d6c | status: 500 | message: Cannot read property 'splice' of undefined
 2021-12-22 19:08:32 error: Error on : http://localhost:5000/user/item/remove/61c3507ce20a35a2fbe6cb52 | status: 500 | message: cartItem is not defined
 2021-12-22 20:04:35 error: Error on : http://localhost:5000/user/item/update/61c3764255f73ce7cf0843a0 | status: 500 | message: product is not defined
+2021-12-22 21:14:30 error: Error on : http://localhost:5000/admin/product/remove/61c38705b4fdc1b9f934a703 | status: 500 | message: Cannot access 'product' before initialization
+2021-12-22 21:15:16 error: Error on : http://localhost:5000/admin/product/remove/61c38705b4fdc1b9f934a703 | status: 500 | message: Cannot access 'product' before initialization
+2021-12-22 21:16:33 error: Error on : http://localhost:5000/admin/product/remove/61c38705b4fdc1b9f934a703 | status: 500 | message: Cannot access 'product' before initialization
+2021-12-22 21:17:24 error: Error on : http://localhost:5000/admin/product/remove/61c38705b4fdc1b9f934a703 | status: 500 | message: Cannot access 'product' before initialization
+2021-12-22 21:31:48 error: Error on : http://localhost:5000/user/item/update/61c3764255f73ce7cf0843a0 | status: 500 | message: Cannot set property 'quantity' of undefined
+2021-12-22 21:31:56 error: Error on : http://localhost:5000/user/item/update/61c3764255f73ce7cf0843a0 | status: 500 | message: Cannot set property 'quantity' of undefined
+2021-12-22 21:32:39 error: Error on : http://localhost:5000/user/item/update/61c3764255f73ce7cf0843a0 | status: 500 | message: Cannot set property 'quantity' of undefined
+2021-12-22 21:35:24 error: Error on : http://localhost:5000/user/item/update/61c3764255f73ce7cf0843a0 | status: 500 | message: Cannot set property 'quantity' of undefined
+2021-12-22 21:35:51 error: Error on : http://localhost:5000/user/item/update/61c3764255f73ce7cf0843a0 | status: 500 | message: Cannot set property 'quantity' of undefined
+2021-12-22 21:36:16 error: Error on : http://localhost:5000/user/item/update/61c389c047514799b0f19aab | status: 500 | message: Cannot set property 'quantity' of undefined
+2021-12-22 21:37:27 error: Error on : http://localhost:5000/user/item/update/61c389c047514799b0f19aab | status: 500 | message: Cannot set property 'quantity' of undefined
+2021-12-22 21:38:34 error: Error on : http://localhost:5000/user/item/update/61c389c047514799b0f19aab | status: 500 | message: Cannot read property 'quantity' of undefined
+2021-12-22 21:38:53 error: Error on : http://localhost:5000/user/item/update/61c389c047514799b0f19aab | status: 500 | message: Cannot read property 'quantity' of undefined
+2021-12-22 21:40:06 error: Error on : http://localhost:5000/user/item/update/61c389c047514799b0f19aab | status: 500 | message: Cannot read property 'quantity' of undefined
+2021-12-22 21:40:39 error: Error on : http://localhost:5000/user/item/update/61c389c047514799b0f19aab | status: 500 | message: Cannot set property 'quantity' of undefined
+2021-12-22 21:41:10 error: Error on : http://localhost:5000/user/item/update/61c3894347514799b0f19a90 | status: 500 | message: Cannot set property 'quantity' of undefined
+2021-12-22 21:42:42 error: Error on : http://localhost:5000/user/item/update/61c38b0c5cd47dfdb6810ef9 | status: 500 | message: Cannot set property 'quantity' of undefined
+2021-12-22 21:42:44 error: Error on : http://localhost:5000/user/item/update/61c38b0c5cd47dfdb6810ef9 | status: 500 | message: Cannot set property 'quantity' of undefined

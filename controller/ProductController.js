@@ -98,7 +98,7 @@ class ProductController {
 
             let product = await Product.findById(product_id);
 
-            await Product.findOneAndUpdate(product._id, {
+            await Product.findByIdAndUpdate(product._id, {
                 $set: {
                     itemname,
                     price,
@@ -132,15 +132,13 @@ class ProductController {
                 return sendResponse(req, res, 401, true, false);
             }
 
-            let product = await Product.findById(product_id);
+            const product = await Product.findByIdAndDelete({_id: product_id});
 
-            console.log(product);
+            if(product) {
+                await logActivity(user_type, user.user_id, user.login, `Deleted Product. ${product}`);
+                return sendResponse(req, res, 200, false, product, "Product deleted successfully");
+            }
 
-            await Product.findOneAndRemove(product._id)
-
-            await logActivity(user_type, user.user_id, user.login, `Deleted Product. ${product}`);
-            return sendResponse(req, res, 200, false, product, "Product deleted successfully");
-            
         } catch (error) {
             console.log(error);
             return sendResponse(req, res, 500, error);
