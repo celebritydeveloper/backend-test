@@ -10,6 +10,7 @@ const app = express();
 const cors = require("cors");
 const helmet = require('helmet');
 const compression = require('compression');
+const { sendResponse } = require("./helpers/ResponseHelper");
 
 
 // Middlewares
@@ -22,11 +23,31 @@ app.use((req, res, next) => {
     next();
 });
 
-
 app.use(cors());
 app.options('*', cors());
 app.use(helmet());
 app.use(compression());
+
+
+//connection to routes
+app.get('/', (req, res) => {
+    sendResponse(req, res, 200, false, true, "Welcome to Shopping Cart");
+})
+
+// app.use('/', RateLimiter.regular);
+// app.use('/user', Routes.UserRoutes);
+
+
+// Handle 404
+app.use(function (req, res) {
+    sendResponse(req, res, 404);
+})
+
+//Handle Server Error
+app.use(function (error, req, res, next) {
+    console.log(error)
+    sendResponse(req, res, 500, error);
+});
 
 
 module.exports = app;
