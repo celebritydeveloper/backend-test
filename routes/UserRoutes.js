@@ -19,30 +19,22 @@ const RateLimiter = require("../middlewares/RateLimiter");
 const {
   validate,
   register_user,
-  login_user,
+  add_cart
 } = require("../middlewares/Validators");
 
 //  /**
-//   * Routes for MISC
+//   * Routes for CART
 //   */
-//  AuthRouter.get("/home", UserController.getHomeData);
-
-
-//router.post("/otp/resend", RateLimiter.otp, Authentication, validate(resend_otp), AuthController.resendOTP);
+AuthRouter.post("/cart/add", Authorization, validate(add_cart), UserController.addItem);
 //router.post("/otp/verify", Authentication, validate(verify_otp), AuthController.verifyOTP);
+
+
 
 //  /**
 //   * Routes for user authentication
 //   */
 
 router.post("/register", RateLimiter.login, validate(register_user), UserController.register);
-
-//router.post("/login", RateLimiter.login, validate(login_user), AuthController.login);
-
-
-//  /**
-//   * Route Group for Admin Authenticated Routes
-//   */
 
 router.use("/", Authentication, Authorization, AuthRouter);
 

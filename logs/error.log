@@ -37,3 +37,30 @@ Require stack:
 2021-12-22 16:17:27 error: Error on : http://localhost:5000/admin/product/all | status: 500 | message: product_id is not defined
 2021-12-22 16:17:29 error: Error on : http://localhost:5000/admin/product/all | status: 500 | message: product_id is not defined
 2021-12-22 16:17:42 error: Error on : http://localhost:5000/admin/product/all | status: 500 | message: product_id is not defined
+2021-12-22 16:29:20 error: Error on : http://localhost:5000/admin/product/61c33d4bbd3aa8e949fc708e | status: 500 | message: user_type is not defined
+2021-12-22 16:29:22 error: Error on : http://localhost:5000/admin/product/61c33d4bbd3aa8e949fc708e | status: 500 | message: user_type is not defined
+2021-12-22 16:29:24 error: Error on : http://localhost:5000/admin/product/61c33d4bbd3aa8e949fc708e | status: 500 | message: user_type is not defined
+2021-12-22 16:29:32 error: Error on : http://localhost:5000/admin/product/61c33d4bbd3aa8e949fc708e | status: 500 | message: user_type is not defined
+2021-12-22 16:29:40 error: Error on : http://localhost:5000/admin/product/61c33d4bbd3aa8e949fc708e | status: 500 | message: user_type is not defined
+2021-12-22 16:29:56 error: Error on : http://localhost:5000/admin/product/61c33d4bbd3aa8e949fc708e | status: 500 | message: user_type is not defined
+2021-12-22 16:29:58 error: Error on : http://localhost:5000/admin/product/61c33d4bbd3aa8e949fc708e | status: 500 | message: user_type is not defined
+2021-12-22 16:30:59 error: Error on : http://localhost:5000/admin/product/61c33d4bbd3aa8e949fc708e | status: 500 | message: user_type is not defined
+2021-12-22 16:31:01 error: Error on : http://localhost:5000/admin/product/61c33d4bbd3aa8e949fc708e | status: 500 | message: user_type is not defined
+2021-12-22 17:01:29 error: Error on : http://localhost:5000/user/cart/add | status: 500 | message: Cannot read property 'user_type' of undefined
+2021-12-22 17:01:30 error: Error on : http://localhost:5000/user/cart/add | status: 500 | message: Cannot read property 'user_type' of undefined
+2021-12-22 17:04:57 error: Error on : http://localhost:5000/user/cart/add | status: 500 | message: Cannot read property 'user_type' of undefined
+2021-12-22 17:05:58 error: Error on : http://localhost:5000/user/cart/add | status: 500 | message: Cannot read property 'user_type' of undefined
+2021-12-22 17:09:53 error: Error on : http://localhost:5000/user/cart/add | status: 500 | message: Cannot read property 'user_type' of undefined
+2021-12-22 17:11:29 error: Error on : http://localhost:5000/user/cart/add | status: 500 | message: Class constructor UserController cannot be invoked without 'new'
+2021-12-22 17:12:16 error: Error on : http://localhost:5000/user/cart/add | status: 500 | message: User.findOne is not a function
+2021-12-22 17:12:35 error: Error on : http://localhost:5000/user/cart/add | status: 500 | message: Class constructor UserController cannot be invoked without 'new'
+2021-12-22 17:13:58 error: Error on : http://localhost:5000/user/cart/add | status: 500 | message: Class constructor UserController cannot be invoked without 'new'
+2021-12-22 17:14:38 error: Error on : http://localhost:5000/user/cart/add | status: 500 | message: Class constructor UserController cannot be invoked without 'new'
+2021-12-22 17:15:04 error: Error on : http://localhost:5000/user/cart/add | status: 500 | message: Cannot read property 'price' of null
+2021-12-22 17:16:28 error: Error on : http://localhost:5000/user/cart/add | status: 500 | message: item_id is not defined
+2021-12-22 17:16:54 error: Error on : http://localhost:5000/user/cart/add | status: 500 | message: quantity is not defined
+2021-12-22 17:19:05 error: Error on : http://localhost:5000/user/cart/add | status: 500 | message: quantity is not defined
+2021-12-22 17:19:21 error: Error on : http://localhost:5000/user/cart/add | status: 500 | message: itemcart is not defined
+2021-12-22 17:19:39 error: Error on : http://localhost:5000/user/cart/add | status: 500 | message: itemId is not defined
+2021-12-22 17:20:09 error: Error on : http://localhost:5000/user/cart/add | status: 500 | message: itemcart is not defined
+2021-12-22 17:21:16 error: Error on : http://localhost:5000/user/cart/add | status: 500 | message: itemCart is not defined

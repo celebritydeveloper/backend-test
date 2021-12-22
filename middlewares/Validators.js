@@ -42,6 +42,11 @@ module.exports = {
     body("stock").isInt(),
   ],
 
+  add_cart: [
+    body("product_id").isString().trim(),
+    body("quantity").isInt(),
+  ],
+
   register_user: [
     body("firstname").isString().trim(),
     body("email").isEmail().trim(),

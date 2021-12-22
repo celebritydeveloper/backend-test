@@ -1,5 +1,7 @@
 const { sendResponse } = require("../helpers/ResponseHelper");
 const { User } = require("../database/models/User");
+const { Cart } = require("../database/models/Cart");
+const { Product } = require("../database/models/Product");
 const { UserLogin } = require("../database/models/UserLogin");
 const { logActivity } = require("../helpers/ActivityLogger");
 const { encrypt, decrypt } = require("../helpers/Encryption");
@@ -82,6 +84,71 @@ class UserController {
             sendResponse(req, res, 500, error);
         }
     }
+
+
+
+    static async addItem(req, res) {
+      try {
+          let { user, product_id, quantity } = req.body;
+          const cart = await Cart.findOne({ user_id: user.user_id });
+          const product = await Product.findOne({ _id: product_id });
+          let user_type;
+
+            if (user.user_type === process.env.USER_TYPE) {
+                user_type = "user";
+            } else {
+                user_type = "admin";
+            }
+
+          let check_details = await User.findOne({ _id: user.user_id  });
+
+          if (!check_details) return sendResponse(req, res, 404, true, false, "User not found");
+          if (!product) return sendResponse(req, res, 404, true, false, "Product not found");
+
+
+          const price = product.price;
+          const name = product.itemname;
+
+          if (cart) {
+            const itemIndex = cart.items.findIndex((item) => item.product_id == product_id);
+            //check if product exists or not
+            if (itemIndex > -1) {
+              let product = cart.items[itemIndex];
+              product.quantity += quantity;
+      
+              cart.total = cart.items.reduce((acc, curr) => {
+                return acc + curr.quantity * curr.price;
+              }, 0)
+              
+              cart.items[itemIndex] = product;
+              await cart.save();
+              res.status(200).send(cart);
+
+            } else {
+              cart.items.push({ product_id, itemname: name, quantity, price });
+
+              cart.total = cart.items.reduce((acc, item) => {
+                return acc + item.quantity * item.price;
+              }, 0)
+      
+              await cart.save();
+              sendResponse(req, res, 200, false, cart, `Added Item to Cart`);
+            }
+          } else {
+            //no cart exists, create one
+            const newCart = await Cart.create({
+              user_id: user.user_id,
+              items: [{ product_id, itemname: name, quantity, price }],
+              total: quantity * price,
+            });
+            sendResponse(req, res, 201, false, newCart, `Created new  Cart`);
+          }
+          
+      } catch (error) {
+          console.log(error);
+          sendResponse(req, res, 500, error);
+      }
+  }
 }
 
 module.exports = UserController;

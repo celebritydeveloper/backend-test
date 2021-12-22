@@ -1,6 +1,6 @@
 "use strict";
 const { sendResponse } = require("../helpers/ResponseHelper");
-const User = require("../database/models/User");
+const { User } = require("../database/models/User");
 
 
 //checks if user type is permitted on route

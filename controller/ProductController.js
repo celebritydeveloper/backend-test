@@ -42,6 +42,7 @@ class ProductController {
     static async fetchProducts (req, res) {
         try {
             let { user  } = req.body;
+
             let user_type;
 
             if (user.user_type === process.env.ADMIN_USER_TYPE) {
@@ -52,10 +53,29 @@ class ProductController {
             }
 
             let product = await Product.find();
-
-            console.log(product);
             sendResponse(req, res, 200, false, product, "Product Fetched successfully");
             
+        } catch (error) {
+            console.log(error);
+            sendResponse(req, res, 500, error);
+        }
+    }
+
+    static async fetchSingleProduct (req, res) {
+        try {
+            let product_id = req.params.product_id;
+            let { user  } = req.body;
+            let user_type;
+
+            if (user.user_type === process.env.ADMIN_USER_TYPE) {
+                user_type = "admin";
+            } else {
+                user_type = "user";
+                return sendResponse(req, res, 401, true, false);
+            }
+
+            let product = await Product.findById(product_id);
+            sendResponse(req, res, 200, false, product, "Product Fetched successfully");
         } catch (error) {
             console.log(error);
             sendResponse(req, res, 500, error);
@@ -77,8 +97,6 @@ class ProductController {
             }
 
             let product = await Product.findById(product_id);
-
-            console.log(product);
 
             await Product.findOneAndUpdate(product._id, {
                 $set: {
