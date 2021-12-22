@@ -29,11 +29,11 @@ class ProductController {
             await product.save();
 
             await logActivity(user_type, user.user_id, user.login, `Created a new Prodcut.`);
-            sendResponse(req, res, 201, false, product, "Product created successfully");
+            return sendResponse(req, res, 201, false, product, "Product created successfully");
             
         } catch (error) {
             console.log(error);
-            sendResponse(req, res, 500, error);
+            return sendResponse(req, res, 500, error);
         }
     }
 
@@ -53,11 +53,11 @@ class ProductController {
             }
 
             let product = await Product.find();
-            sendResponse(req, res, 200, false, product, "Product Fetched successfully");
+            return sendResponse(req, res, 200, false, product, "Product Fetched successfully");
             
         } catch (error) {
             console.log(error);
-            sendResponse(req, res, 500, error);
+            return sendResponse(req, res, 500, error);
         }
     }
 
@@ -74,11 +74,11 @@ class ProductController {
                 return sendResponse(req, res, 401, true, false);
             }
 
-            let product = await Product.findById(product_id);
-            sendResponse(req, res, 200, false, product, "Product Fetched successfully");
+            let product = await Product.findById({_id: product_id});
+            return sendResponse(req, res, 200, false, product, "Product Fetched successfully");
         } catch (error) {
             console.log(error);
-            sendResponse(req, res, 500, error);
+            return sendResponse(req, res, 500, error);
         }
     }
 
@@ -110,11 +110,11 @@ class ProductController {
             });
 
             await logActivity(user_type, user.user_id, user.login, `Updated Product. ${product}`);
-            sendResponse(req, res, 200, false, product, "Product Updated successfully");
+            return sendResponse(req, res, 200, false, product, "Product Updated successfully");
             
         } catch (error) {
             console.log(error);
-            sendResponse(req, res, 500, error);
+            return sendResponse(req, res, 500, error);
         }
     }
 
@@ -139,11 +139,11 @@ class ProductController {
             await Product.findOneAndRemove(product._id)
 
             await logActivity(user_type, user.user_id, user.login, `Deleted Product. ${product}`);
-            sendResponse(req, res, 200, false, product, "Product deleted successfully");
+            return sendResponse(req, res, 200, false, product, "Product deleted successfully");
             
         } catch (error) {
             console.log(error);
-            sendResponse(req, res, 500, error);
+            return sendResponse(req, res, 500, error);
         }
     }
 }

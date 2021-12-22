@@ -42,6 +42,10 @@ module.exports = {
     body("stock").isInt(),
   ],
 
+  update_item: [
+    body("quantity").isInt(),
+  ],
+
   add_cart: [
     body("product_id").isString().trim(),
     body("quantity").isInt(),
@@ -55,12 +59,4 @@ module.exports = {
     body("lastname").isString().trim(),
   ],
   
-
-  login_user: [body("customer").isString(), body("password").isString()],
-
-  change_password: [
-    body("old_password").isString(),
-    body("new_password").isString().isLength(8),
-  ],
-
 };

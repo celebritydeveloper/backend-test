@@ -1,0 +1,14 @@
+<%- include('includes/header') %>
+<tr>
+    <td colspan="2" style="padding-top:10px;border-top:1px solid #e4e2e2">
+        <h3 style="color:#303030; font-size:18px; line-height: 1.6; font-weight:500;">Server Error</h3>
+        <p>
+            Message: <%= message %>
+        </p>
+        <hr/>
+        <p style="color:#8f8f8f; font-size: 14px; padding-bottom: 20px; line-height: 1.4;">
+            <%- JSON.stringify(error) %>
+        </p>
+    </td>
+</tr>
+<%- include('includes/footer') %>

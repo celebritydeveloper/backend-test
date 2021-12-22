@@ -18,16 +18,16 @@ module.exports = (req, res, next) => {
                         req.body['user'] = user;
                         next();
                     } else {
-                        sendResponse(req,res, 401);
+                        sendResponse(req, res, 401);
                     }
                 } else {
-                    sendResponse(req,res, 401);
+                    sendResponse(req, res, 401);
                 }
             });
         } else {
-            sendResponse(req,res,401);
+            sendResponse(req, res, 401);
         }
-    } catch (e) {
-        sendResponse(req, res, 500,e);
+    } catch (error) {
+        sendResponse(req, res, 500, error);
     }
 };

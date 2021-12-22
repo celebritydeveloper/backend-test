@@ -25,7 +25,7 @@ const {
 //   * Routes for PRODUCT
 //   */
 
-AuthRouter.get('/product/all', ProductController.fetchProducts);
+AuthRouter.get('/products', ProductController.fetchProducts);
 AuthRouter.get('/product/:product_id', ProductController.fetchSingleProduct);
 AuthRouter.post("/product/create", validate(create_product), ProductController.createProduct);
 AuthRouter.put('/product/update/:product_id', validate(update_product), ProductController.updateProduct);
