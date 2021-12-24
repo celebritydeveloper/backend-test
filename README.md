@@ -16,53 +16,85 @@ npm install
 
 
 ### Products
-[Create Product - https://backend-test-interview.herokuapp.com/products](https://backend-test-interview.herokuapp.com/products)
 
-[Fetch a Single Product - https://backend-test-interview.herokuapp.com/products](https://backend-test-interview.herokuapp.com/products/:product_id)
+##### Create Product
+```bash
+https://backend-test-interview.herokuapp.com/products](https://backend-test-interview.herokuapp.com/products
+```
 
-[Fetch all Product - https://backend-test-interview.herokuapp.com/products](https://backend-test-interview.herokuapp.com/products)
+#### Fetch a Single Product
+```bash
+https://backend-test-interview.herokuapp.com/products](https://backend-test-interview.herokuapp.com/products/:product_id
+```
 
-[Edit Product - https://backend-test-interview.herokuapp.com/products](https://backend-test-interview.herokuapp.com/products/:product_id)
+##### Fetch all Product 
+```bash
+https://backend-test-interview.herokuapp.com/products](https://backend-test-interview.herokuapp.com/products
+```
 
-[Delete a Product - https://backend-test-interview.herokuapp.com/products](https://backend-test-interview.herokuapp.com/products/product_id)
+##### Edit a Product
+```bash
+https://backend-test-interview.herokuapp.com/products](https://backend-test-interview.herokuapp.com/products/:product_id
+```
+
+##### Delete a Product
+```bash
+https://backend-test-interview.herokuapp.com/products](https://backend-test-interview.herokuapp.com/products/:product_id
+```
 
 
 
 ### Users
-[Add Product to Cart - https://backend-test-interview.herokuapp.com/users/carts](https://backend-test-interview.herokuapp.com/users/carts)
 
-##### data
+
+##### Add Product to Cart
+
 {
     "user": String,
     "product_id": String,
     "quantity": Number
 }
 
-[Fetch all Cart Items - https://backend-test-interview.herokuapp.com/users/carts](https://backend-test-interview.herokuapp.com/users/carts)
+```bash
+https://backend-test-interview.herokuapp.com/users/carts](https://backend-test-interview.herokuapp.com/users/carts
+```
 
-##### data
+##### Fetch all Cart Items
+
 {
     "user": String
 }
 
-[Edit Single Cart Item - https://backend-test-interview.herokuapp.com/users/carts](https://backend-test-interview.herokuapp.com/users/carts/:single_id)
+```bash
+https://backend-test-interview.herokuapp.com/users/carts](https://backend-test-interview.herokuapp.com/users/carts
+```
 
-##### data
+###### Edit Single Cart Item 
+
 {
     "user": String,
     "quantity": Number
 }
 
-[Delete a Single Cart Item - https://backend-test-interview.herokuapp.com/users/carts](https://backend-test-interview.herokuapp.com/users/carts/item_id)
+```bash
+https://backend-test-interview.herokuapp.com/users/carts](https://backend-test-interview.herokuapp.com/users/carts/:item_id
+```
 
-##### data
+###### Delete a Single Cart Item 
+
 {
     "user": String
 }
 
-[Delete Cart - https://backend-test-interview.herokuapp.com/products](https://backend-test-interview.herokuapp.com/users/carts/cart_id)
+```bash
+https://backend-test-interview.herokuapp.com/users/carts](https://backend-test-interview.herokuapp.com/users/carts/item_id
+```
 
+##### Delete Cart
 
+```bash
+https://backend-test-interview.herokuapp.com/products](https://backend-test-interview.herokuapp.com/users/carts/cart_id
+```
 
 
 
