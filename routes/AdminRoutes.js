@@ -12,7 +12,6 @@ const ProductController = require("../controller/ProductController");
 
 const {
   validate,
-  register_admin,
   create_product,
   update_product
 } = require("../middlewares/Validators");
@@ -27,13 +26,6 @@ router.post("/product", validate(create_product), ProductController.createProduc
 router.put('/product/:product_id', validate(update_product), ProductController.updateProduct);
 router.delete('/product/:product_id', ProductController.deleteProduct);
 
-
-
-//  /**
-//   * Routes for admin authentication
-//   */
-
-router.post("/register", validate(register_admin), AdminController.register);
 
 
 

@@ -22,14 +22,6 @@ module.exports = {
     };
   },
 
-  register_admin: [
-    body("firstname").isString().trim(),
-    body("lastname").isString().trim(),
-    body("email").isEmail().trim(),
-    body("phone").isMobilePhone("en-NG"),
-    body("admin_type").isString().trim(),
-  ],
-
   create_product: [
     body("itemname").isString().trim(),
     body("price").isInt(),
@@ -47,6 +39,7 @@ module.exports = {
   ],
 
   add_cart: [
+    body("user").isString().trim(),
     body("product_id").isString().trim(),
     body("quantity").isInt(),
   ],
