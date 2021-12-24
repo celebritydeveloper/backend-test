@@ -7,7 +7,7 @@ Clone the project into your preferred directory in your local computer.
 git clone https://github.com/celebritydeveloper/backend-test.git
 ```
 
-Use the package manager [npm](https://npmjs.com) to install this project.
+Use the node package manager [npm](https://npmjs.com) to install this project dependencies.
 ```bash
 npm install
 ```
