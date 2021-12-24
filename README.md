@@ -15,7 +15,7 @@ npm install
 ## API Endpoints
 
 
-### Product
+### Products
 [Create Product - https://backend-test-interview.herokuapp.com/products](https://backend-test-interview.herokuapp.com/products)
 
 [Fetch a Single Product - https://backend-test-interview.herokuapp.com/products](https://backend-test-interview.herokuapp.com/products/:product_id)
@@ -28,38 +28,38 @@ npm install
 
 
 
-### User
+### Users
 [Add Product to Cart - https://backend-test-interview.herokuapp.com/users/carts](https://backend-test-interview.herokuapp.com/users/carts)
 
-#### Data
+##### data
 {
     "user"
 }
 
 [Fetch all Cart Items - https://backend-test-interview.herokuapp.com/users/carts](https://backend-test-interview.herokuapp.com/users/carts)
 
-#### Data
+##### data
 {
     "user"
 }
 
 [Edit Single Cart Item - https://backend-test-interview.herokuapp.com/users/carts](https://backend-test-interview.herokuapp.com/users/carts/:single_id)
 
-#### Data
+##### data
 {
     "user"
 }
 
 [Delete a Single Cart Item - https://backend-test-interview.herokuapp.com/users/carts](https://backend-test-interview.herokuapp.com/users/carts/item_id)
 
-#### Data
+##### data
 {
     "user"
 }
 
 [Delete Cart - https://backend-test-interview.herokuapp.com/products](https://backend-test-interview.herokuapp.com/users/carts/cart_id)
 
-#### Data
+##### data
 {
     "user"
 }
