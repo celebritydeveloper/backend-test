@@ -12,6 +12,14 @@ Use the node package manager [npm](https://npmjs.com) to install this project de
 npm install
 ```
 
+
+## Live API URL
+
+Use this url to access the [Live API URL](https://backend-test-interview.herokuapp.com/) of the project 
+
+
+
+
 ## API Endpoints
 
 
