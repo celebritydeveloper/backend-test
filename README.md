@@ -25,7 +25,7 @@ Use this url to access the [Live API URL](https://backend-test-interview.herokua
 
 ### Products
 
-##### Create Product
+##### Create a Product
 ```bash
 https://backend-test-interview.herokuapp.com/products
 ```
@@ -90,7 +90,7 @@ https://backend-test-interview.herokuapp.com/users/carts
 https://backend-test-interview.herokuapp.com/users/carts
 ```
 
-###### Edit Single Cart Item 
+##### Edit Single Cart Item 
 
 {
     "user": String,
@@ -101,7 +101,7 @@ https://backend-test-interview.herokuapp.com/users/carts
 https://backend-test-interview.herokuapp.com/users/carts/:item_id
 ```
 
-###### Delete a Single Cart Item 
+##### Delete a Single Cart Item 
 
 {
     "user": String
