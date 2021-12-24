@@ -55,6 +55,19 @@ https://backend-test-interview.herokuapp.com/products/:product_id
 ### Users
 
 
+##### Create a User
+
+{
+    "firstname": String,
+    "lastname": String,
+    "email": String,
+    "phone": String
+}
+
+```bash
+https://backend-test-interview.herokuapp.com/users
+```
+
 ##### Add Product to Cart
 
 {
