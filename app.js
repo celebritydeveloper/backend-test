@@ -32,8 +32,8 @@ app.get('/', (req, res) => {
     sendResponse(req, res, 200, false, true, "Welcome to Shopping Cart");
 })
 
-app.use('/user', userRoutes);
-app.use('/admin', adminRoutes);
+app.use('/users', userRoutes);
+app.use('/admins', adminRoutes);
 
 
 // Handle 404

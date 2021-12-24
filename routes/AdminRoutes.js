@@ -21,10 +21,10 @@ const {
 //   */
 
 router.get('/products', ProductController.fetchProducts);
-router.get('/product/:product_id', ProductController.fetchSingleProduct);
-router.post("/product", validate(create_product), ProductController.createProduct);
-router.put('/product/:product_id', validate(update_product), ProductController.updateProduct);
-router.delete('/product/:product_id', ProductController.deleteProduct);
+router.get('/products/:product_id', ProductController.fetchSingleProduct);
+router.post("/products", validate(create_product), ProductController.createProduct);
+router.put('/products/:product_id', validate(update_product), ProductController.updateProduct);
+router.delete('/products/:product_id', ProductController.deleteProduct);
 
 
 

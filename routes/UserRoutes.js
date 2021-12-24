@@ -20,10 +20,11 @@ const {
 //  /**
 //   * Routes for CART
 //   */
-router.post("/cart", validate(add_cart), UserController.addItem);
-router.put('/item/:item_id', validate(update_item), UserController.editItemQuantity);
-router.delete('/item/:item_id', UserController.deleteItem);
-router.delete('/cart/:cart_id', UserController.removeCart);
+router.post("/carts", validate(add_cart), UserController.addItem);
+router.get('/carts', UserController.fetchItems);
+router.put('/items/:item_id', validate(update_item), UserController.editItemQuantity);
+router.delete('/items/:item_id', UserController.deleteItem);
+router.delete('/carts/:cart_id', UserController.removeCart);
 //router.post("/otp/verify", Authentication, validate(verify_otp), AuthController.verifyOTP);
 
 
@@ -32,7 +33,7 @@ router.delete('/cart/:cart_id', UserController.removeCart);
 //   * Routes for user authentication
 //   */
 
-router.post("/register", validate(register_user), UserController.register);
+router.post("/", validate(register_user), UserController.register);
 
 
 

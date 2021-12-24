@@ -112,6 +112,23 @@ class UserController {
     }
   }
 
+  static async fetchItems (req, res) {
+    try {
+      const { user } = req.body;
+      const cart = await Cart.find({ user_id: user });
+      if (cart.data) {
+        return sendResponse(req, res, 200, false, cart, "Cart items Fetched successfully");
+      } else {
+        return sendResponse(req, res, 200, false, cart, "Cart emptty");
+      }
+        
+        
+    } catch (error) {
+        console.log(error);
+        return sendResponse(req, res, 500, error);
+    }
+}
+
 
 
   static async deleteItem(req, res) {

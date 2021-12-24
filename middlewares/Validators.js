@@ -48,7 +48,6 @@ module.exports = {
     body("firstname").isString().trim(),
     body("email").isEmail().trim(),
     body("phone").isMobilePhone("en-NG"),
-    body("password").isString().isLength(8),
     body("lastname").isString().trim(),
   ],
   
