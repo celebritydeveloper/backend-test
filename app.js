@@ -10,7 +10,7 @@ const app = express();
 const cors = require("cors");
 const { sendResponse } = require("./helpers/ResponseHelper");
 const userRoutes = require('./routes/UserRoutes');
-const adminRoutes = require('./routes/AdminRoutes');
+const adminRoutes = require('./routes/ProductRoutes');
 
 
 // Middlewares
@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/users', userRoutes);
-app.use('/admins', adminRoutes);
+app.use('/products', adminRoutes);
 
 
 // Handle 404
