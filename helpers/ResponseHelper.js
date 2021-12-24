@@ -1,6 +1,3 @@
-const Logger = new (require('./Logger'));
-const { sendEmail } = require('./Email');
-
 class ResponseHelper {
     static async sendResponse(
         req,
@@ -56,17 +53,6 @@ class ResponseHelper {
             case 500:
                 response["error"] = true;
                 response["message"] = message ? message : "Internal Server Error";
-                if(process.env.NODE_ENV == "production"){
-                    await sendEmail({
-                        email: "essiensaviour.a@gmail.com",
-                        path: "error_mail",
-                        data: {
-                            message: `Error on : ${req.protocol}://${req.get('host')}${req.originalUrl} | status: ${status} | message: ${error.message}`,
-                            error: error
-                        },
-                        title: "Error Email"
-                    })
-                }
                 Logger.log('error',`Error on : ${req.protocol}://${req.get('host')}${req.originalUrl} | status: ${status} | message: ${error.message}`);
                 break;
         }

@@ -2,16 +2,13 @@ const { sendResponse } = require("../helpers/ResponseHelper");
 const { User } = require("../database/models/User");
 const { Cart } = require("../database/models/Cart");
 const { Product } = require("../database/models/Product");
-const { UserLogin } = require("../database/models/UserLogin");
-const { logActivity } = require("../helpers/ActivityLogger");
-const { encrypt, decrypt } = require("../helpers/Encryption");
 
 class UserController {
   static async register(req, res) {
     try {
-      let { firstname, lastname, email, phone, password } = req.body;
+      const { firstname, lastname, email, phone, password } = req.body;
 
-      let check_details = await User.findOne({ email: email, phone: phone });
+      const check_details = await User.findOne({ email: email, phone: phone });
 
       if (check_details) {
         if (check_details.email === email) {
@@ -64,7 +61,7 @@ class UserController {
       const salt = await bcrypt.genSalt(10);
       password = await bcrypt.hash(password, salt);
 
-      let user_details = await new User({
+      const user_details = await new User({
         firstname,
         lastname,
         email,
@@ -79,33 +76,7 @@ class UserController {
       await user_details.save();
 
       if (user_details) {
-        const { getLoginData } = require("../helpers/LoginData");
-
-        let login_data = await getLoginData(req);
-        login_data.user_id = user_details._id;
-        login_data.details = "Created a user account";
-
-        let login = await new UserLogin(login_data);
-        await login.save();
-
-        let jwt_payload = {
-          user_id: encrypt(user_details._id.toString()),
-          user_type: encrypt(process.env.USER_TYPE.toString()),
-          login: encrypt(login.id.toString()),
-        };
-
-        const JWT = require("jsonwebtoken");
-
-        let authorization = JWT.sign(jwt_payload, process.env.JWT_SECRET);
-        user_details["authorization"] = authorization;
-
-        let user = {
-          user_details,
-          authorization,
-        };
-
-        await logActivity("user", user_details._id, login._id, `Registered.`);
-        sendResponse(req, res, 201, false, user, "User created successfully");
+        sendResponse(req, res, 201, false, user_details, "User created successfully");
       }
     } catch (error) {
       console.log(error);
@@ -115,7 +86,7 @@ class UserController {
 
   static async addItem(req, res) {
     try {
-      let { user, product_id, quantity } = req.body;
+      const { user, product_id, quantity } = req.body;
       const cart = await Cart.findOne({ user_id: user.user_id });
       const product = await Product.findOne({ _id: product_id });
       let user_type;
@@ -126,7 +97,7 @@ class UserController {
         user_type = "admin";
       }
 
-      let check_details = await User.findOne({ _id: user.user_id });
+      const check_details = await User.findOne({ _id: user.user_id });
 
       if (!check_details)
         return sendResponse(req, res, 404, true, false, "User not found");
@@ -182,9 +153,9 @@ class UserController {
   static async editItemQuantity(req, res) {
     try {
       const item_id = req.params.item_id;
-      let { user, quantity } = req.body;
+      const { user, quantity } = req.body;
 
-      let cart = await Cart.findOne({ user_id: user.user_id });
+      const cart = await Cart.findOne({ user_id: user.user_id });
       const itemIndex = cart.items.findIndex((item) => item._id == item_id);
 
       if (itemIndex > -1) {
@@ -216,13 +187,13 @@ class UserController {
   static async deleteItem(req, res) {
     try {
       const item_id = req.params.item_id;
-      let { user } = req.body;
+      const { user } = req.body;
 
-      let cart = await Cart.findOne({ user_id: user.user_id });
+      const cart = await Cart.findOne({ user_id: user.user_id });
       const productIndex = cart.items.findIndex((item) => item._id == item_id);
 
       if (productIndex > -1) {
-        let item = cart.items[productIndex];
+        const item = cart.items[productIndex];
         cart.total -= item.quantity * item.price;
         if (cart.total < 0) {
           cart.total = 0;
@@ -245,9 +216,9 @@ class UserController {
   static async removeCart(req, res) {
     try {
       const cart_id = req.params.cart_id;
-      let { user } = req.body;
+      const { user } = req.body;
 
-      let cart = await Cart.findOne({ _id: cart_id });
+      const cart = await Cart.findOne({ _id: cart_id });
 
       if (cart) {
         await Cart.findOneAndDelete(cart_id);

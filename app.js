@@ -8,10 +8,7 @@ const bodyParser = require("body-parser");
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const helmet = require('helmet');
-const compression = require('compression');
 const { sendResponse } = require("./helpers/ResponseHelper");
-const RateLimiter = require('./middlewares/RateLimiter');
 const userRoutes = require('./routes/UserRoutes');
 const adminRoutes = require('./routes/AdminRoutes');
 
@@ -28,8 +25,6 @@ app.use((req, res, next) => {
 
 app.use(cors());
 app.options('*', cors());
-app.use(helmet());
-app.use(compression());
 
 
 //connection to routes
@@ -37,7 +32,6 @@ app.get('/', (req, res) => {
     sendResponse(req, res, 200, false, true, "Welcome to Shopping Cart");
 })
 
-app.use('/', RateLimiter.regular);
 app.use('/user', userRoutes);
 app.use('/admin', adminRoutes);
 
