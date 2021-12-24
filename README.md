@@ -33,36 +33,35 @@ npm install
 
 ##### data
 {
-    "user"
+    "user": String,
+    "product_id": String,
+    "quantity": Number
 }
 
 [Fetch all Cart Items - https://backend-test-interview.herokuapp.com/users/carts](https://backend-test-interview.herokuapp.com/users/carts)
 
 ##### data
 {
-    "user"
+    "user": String
 }
 
 [Edit Single Cart Item - https://backend-test-interview.herokuapp.com/users/carts](https://backend-test-interview.herokuapp.com/users/carts/:single_id)
 
 ##### data
 {
-    "user"
+    "user": String,
+    "quantity": Number
 }
 
 [Delete a Single Cart Item - https://backend-test-interview.herokuapp.com/users/carts](https://backend-test-interview.herokuapp.com/users/carts/item_id)
 
 ##### data
 {
-    "user"
+    "user": String
 }
 
 [Delete Cart - https://backend-test-interview.herokuapp.com/products](https://backend-test-interview.herokuapp.com/users/carts/cart_id)
 
-##### data
-{
-    "user"
-}
 
 
 
