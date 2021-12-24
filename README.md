@@ -19,27 +19,27 @@ npm install
 
 ##### Create Product
 ```bash
-https://backend-test-interview.herokuapp.com/products](https://backend-test-interview.herokuapp.com/products
+https://backend-test-interview.herokuapp.com/products
 ```
 
 #### Fetch a Single Product
 ```bash
-https://backend-test-interview.herokuapp.com/products](https://backend-test-interview.herokuapp.com/products/:product_id
+https://backend-test-interview.herokuapp.com/products/:product_id
 ```
 
 ##### Fetch all Product 
 ```bash
-https://backend-test-interview.herokuapp.com/products](https://backend-test-interview.herokuapp.com/products
+https://backend-test-interview.herokuapp.com/products
 ```
 
 ##### Edit a Product
 ```bash
-https://backend-test-interview.herokuapp.com/products](https://backend-test-interview.herokuapp.com/products/:product_id
+https://backend-test-interview.herokuapp.com/products/:product_id
 ```
 
 ##### Delete a Product
 ```bash
-https://backend-test-interview.herokuapp.com/products](https://backend-test-interview.herokuapp.com/products/:product_id
+https://backend-test-interview.herokuapp.com/products/:product_id
 ```
 
 
@@ -56,7 +56,7 @@ https://backend-test-interview.herokuapp.com/products](https://backend-test-inte
 }
 
 ```bash
-https://backend-test-interview.herokuapp.com/users/carts](https://backend-test-interview.herokuapp.com/users/carts
+https://backend-test-interview.herokuapp.com/users/carts
 ```
 
 ##### Fetch all Cart Items
@@ -66,7 +66,7 @@ https://backend-test-interview.herokuapp.com/users/carts](https://backend-test-i
 }
 
 ```bash
-https://backend-test-interview.herokuapp.com/users/carts](https://backend-test-interview.herokuapp.com/users/carts
+https://backend-test-interview.herokuapp.com/users/carts
 ```
 
 ###### Edit Single Cart Item 
@@ -77,7 +77,7 @@ https://backend-test-interview.herokuapp.com/users/carts](https://backend-test-i
 }
 
 ```bash
-https://backend-test-interview.herokuapp.com/users/carts](https://backend-test-interview.herokuapp.com/users/carts/:item_id
+https://backend-test-interview.herokuapp.com/users/carts/:item_id
 ```
 
 ###### Delete a Single Cart Item 
@@ -87,13 +87,13 @@ https://backend-test-interview.herokuapp.com/users/carts](https://backend-test-i
 }
 
 ```bash
-https://backend-test-interview.herokuapp.com/users/carts](https://backend-test-interview.herokuapp.com/users/carts/item_id
+https://backend-test-interview.herokuapp.com/users/carts/item_id
 ```
 
 ##### Delete Cart
 
 ```bash
-https://backend-test-interview.herokuapp.com/products](https://backend-test-interview.herokuapp.com/users/carts/cart_id
+https://backend-test-interview.herokuapp.com/users/carts/cart_id
 ```
 
 
